@@ -12,15 +12,6 @@ class Student
     int marks;
 };
 
-bool cmp(Student l,Student r)
-{
-    if(l.marks==r.marks)
-    {
-        return l.roll<r.roll;
-    }
-    else return l.marks<r.marks;
-}
-
 int main()
 {
     opt();
@@ -31,7 +22,7 @@ int main()
     {
         cin>>s[i].name>>s[i].roll>>s[i].marks;
     }
-    sort(s,s+n,cmp);
+    reverse(s,s+n);
     for(int i=0;i<n;i++)
     {
         cout<<s[i].name<<" "<<s[i].roll<<" "<<s[i].marks<<endl;
